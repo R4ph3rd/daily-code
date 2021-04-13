@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily-Code workbench</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+            list-style-type: none;
+            text-decoration: none;
+
+            background-color: rgb(242, 243, 250);
+        }
+
+        body {
+            margin-left:10%;
+            margin-top:10%;
+        }
+
+        h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-bottom: 50px;
+        }
+        
+        p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            color:black;
+        }
+
+        img{
+            width:100%;
+            height:200px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 0 12px 4px rgab(0,0,0,.12);
+        }
+
+        .grid{
+            display:grid;
+            width:100%;
+            max-width:900px;
+            height:100%;
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: max-content;
+            grid-row-gap:20px;
+            grid-column-gap:20px;
+
+        }
+        
+        @media (min-width:1300px){
+            .grid{
+                max-width:1200px;
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .grid li {
+            width:100%;
+            height:100%;
+            transition: .2s ease-out;
+        }
+
+        .grid li a {
+            width:100%;
+            height: 100%;
+        }
+
+        .grid li:hover{
+            transition: .2s ease-out;
+            transform: translateY(-5px);
+        }
+        
+        .grid li:hover img{
+            transition: .2s ease-out;
+            box-shadow: 0 4px 20px 2px rgba(0,0,0,.22);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Daily code workbench</h1>
+
+    <ul class="grid">
+        <li>
+            <a href="./tic-tac-toe/public/index.html">
+                <img src="./tic-tac-toe/thumbnail.gif" alt="">
+                <p>Day 01 - Tic tac toe</p>
+            </a>
+        </li>
+        <li>
+            <a href="./calculator/index.html">
+                <img src="./calculator/thumbnail.gif" alt="">
+                <p>Day 02 - Calculator</p>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="alert('Please download the repo and start your myslq & php service to serve the app with PHP cli.')">
+                <img src="./pets_api/thumbnail.png" alt="">
+                <p>Day 03 - Lumen API</p>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="alert('Please download the repo and start your myslq & php service to serve the app with PHP cli.')">
+                <img src="./agence-voyage_backend-interface/thumbnails/day-04.png" alt="">
+                <p>Day 04 - Backend API for travel agency</p>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="alert('Please download the repo and start your myslq & php service to serve the app with PHP cli.')">
+                <img src="./agence-voyage_backend-interface/thumbnails/day-05.png" alt="">
+                <p>Day 05 - Ticketing management et gestion de session php</p>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="alert('Please download the repo and start your myslq & php service to serve the app with PHP cli.')">
+                <img src="./agence-voyage_backend-interface/thumbnails/day-05.png" alt="">
+                <p>Day 06 - User profile management</p>
+            </a>
+        </li>
+        <li>
+            <a href="./minesweeper/index.html">
+                <img src="./minesweeper/minesweeper.png" alt="">
+                <p>Day 07 - Démineur</p>
+            </a>
+        </li>
+    </ul>
+    
+</body>
+</html>

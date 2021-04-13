@@ -1,0 +1,60 @@
+.page{
+    padding-top:50px !important;
+}
+
+table{
+    width:100%;
+}
+
+thead tr:last-child *{
+    font-weight:700;
+}
+
+tbody tr *{
+    font-weight: 500;
+}
+
+tr{
+    height:2em;
+}
+
+.tab {
+    width:100%;
+    display:flex;
+    margin-bottom:50px;
+    border: 1px solid black;
+    border-radius:4px;
+    padding:8px 0;
+    justify-content: space-evenly;
+}
+
+.tab a {
+    padding:12px 20px;
+    background:rgb(220,220,220);
+    border-radius: 2px;
+
+    font-weight: 700;
+    text-decoration: none;
+    background:rgb(33, 179, 123);
+    color:white;
+}
+
+.tab a.inactiveTab{
+    font-weight:500;
+    opacity: .5;
+}
+
+form{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap:12px;
+}
+
+label{
+    display: inline;
+}
+
+label + input{
+    display: inline-block;
+}

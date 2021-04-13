@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Touristo - Cart</title>
+  <link rel="stylesheet" type="text/css" href="/index.css">
+</head>
+
+<body>
+
+  <main>
+
+    <section class="cover cart">
+      <!-- -------------- -->
+      <!-- nav -->
+      <!-- -------------- -->
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Workshops</a>
+          </li>
+          <li class="active">
+            <a href="#">Events</a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Cart</span>
+              <i>3</i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- -------------- -->
+      <!-- header -->
+      <!-- -------------- -->
+
+      <header>
+        <small>Events</small>
+        <h1>Your cart</h1>
+      </header>
+    </section>
+
+
+    <section class="page cart">
+
+      <!-- -------------- -->
+      <!-- section -->
+      <!-- -------------- -->
+
+      <!-- no product in cart -->
+      <div class="cart-empty" style="display: none">Your cart is empty</div>
+
+      <!-- product(s) in cart -->
+      <table class="cart-products">
+        <thead>
+          <tr>
+            <th>Name of the event</th>
+            <th>Number of tickets</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>My event 1</td>
+            <td>3 tickets</td>
+            <td>
+              <div class="action">
+                <form action="">
+                    <input type="number" value="0"><small>places</small>
+                    <button type="button">Update</button>
+                </form>
+              </div>
+              <div class="action">
+                <button type="button" class="red">Delete</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>My event 2</td>
+            <td>3 tickets</td>
+            <td>
+              <div class="action">
+                <form action="">
+                    <input type="number" value="0"><small>places</small>
+                    <button type="button">Udpate</button>
+                </form>
+              </div>
+              <div class="action">
+                <button type="button" class="red">Delete</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="cart-validation">
+        <button class="btn-validate" type="button">Validate and book</button>
+      </div>
+
+      <div class="cart-address-form">
+        <!-- form here - no design applied -->
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Touristo - 2018</p>
+  </footer>
+
+</body>
+
+</html>

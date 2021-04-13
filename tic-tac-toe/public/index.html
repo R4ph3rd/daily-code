@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="normalize.css"/>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="icon" type="image/jpg" href="assets/images/favicon.png">
+  </head>
+  <body>
+
+    <div class="app">
+      
+		<section id="intro" class="hidden">
+			<div class="inner">
+			
+				<!-- STEP CHOOSE GAME MODE -->
+				<div id="step-choose-game-mode" class="">
+					<h3>Choisissez votre mode de jeu</h3>
+					<a class="btn" data-mode="vs">
+						<span class="btn-inner">Joueur vs Joueur</span>
+					</a>
+					<div class="clear"></div>
+					<a class="btn" data-mode="ai">
+						<span class="btn-inner">Joueur vs IA</span>
+					</a>
+				</div>
+				<!-- / STEP CHOOSE GAME MODE -->
+
+				<!-- STEP FORM PLAYER VS PLAYER -->
+				<form id="step-type-game-vs" class="hidden">
+					<h3>Prénoms des joueurs</h3>
+					
+					<div class="input input-player-1">
+						<input type="text" name="player-1" placeholder="Joueur 1" />
+					</div>
+
+					<div class="input input-player-2">
+						<input type="text" name="player-2" placeholder="Joueur 2" />
+					</div>
+					
+					<button type="submit" name="submit" class="btn">
+							<span class="btn-inner">Jouer</span>
+						</button>
+
+				</form>
+				<!-- / STEP FORM PLAYER VS PLAYER -->
+
+				<!-- STEP FORM PLAYER VS AI -->
+				<form id="step-type-game-ai" class="hidden">
+					<h3>Votre prénom</h3>
+					
+					<div class="input input-player-1">
+						<input type="text" name="player-1" placeholder="Joueur 1" />
+					</div>
+					
+					<button type="submit" name="submit" class="btn">
+							<span class="btn-inner">Jouer</span>
+					</button>
+				</form>
+				<!-- / STEP FORM PLAYER VS AI -->
+			
+			</div>
+		</section>
+		<section id="game" class="hidden">
+			<div class="inner">
+
+				<!-- TURN LABEL -->
+				<h2 id="title-turn-label" class="">A ton tour, <b id="player-firstname">Céline</b></h2>
+				<!-- / TURN LABEL -->
+
+				<!-- BOARD GAME -->
+				<div id="board-game">
+
+					<div class="board">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329 329" width="329px" height="329px">
+							<path d="M0,219H329v1H0v-1Z" fill="white" fill-opacity="0.5" fill-rule="evenodd"/>
+							<path d="M0,109H329v1H0v-1Z" fill="white" fill-opacity="0.5" fill-rule="evenodd"/>
+							<path d="M219,0h1V329h-1V0Z" fill="white" fill-opacity="0.5" fill-rule="evenodd"/>
+							<path d="M109,0h1V329h-1V0Z" fill="white" fill-opacity="0.5" fill-rule="evenodd"/>
+						</svg>
+					</div>
+
+					<!-- SYMBOLS -->
+					<ul class="symbols">
+						<li class="symbol" data-id="0">
+							<!-- example with a cross -->
+							<div class="symbol-cross"></div>
+						</li>
+						<li class="symbol" data-id="1">
+							<!-- example with a circle -->
+							<div class="symbol-circle"></div>
+						</li>
+						<li class="symbol" data-id="2"></li>
+						<li class="symbol" data-id="3"></li>
+						<li class="symbol" data-id="4"></li>
+						<li class="symbol" data-id="5"></li>
+						<li class="symbol" data-id="6"></li>
+						<li class="symbol" data-id="7"></li>
+						<li class="symbol" data-id="8"></li>
+					</ul>
+					<!-- / SYMBOLS -->
+
+				</div>
+				<!-- / BOARD GAME -->
+
+				<!-- TIME ELAPSED -->
+				<div id="time-elapsed">
+					<span class="time">00:00</span>
+					<small>Temps écoulé</small>
+				</div>
+				<!-- / TIME ELAPSED -->
+
+				<a class="btn" id="btn-replay">
+					<span class="btn-inner">Quitter la partie</span>
+				</a>
+				
+			</div>
+		</section>
+		<aside id="end-game" class="hidden">
+
+			<!-- OVERLAY -->
+			<div class="overlay"></div>
+			<!-- / OVERLAY -->
+
+			<div class="inner">
+
+			<div class="modal-wrapper">
+				<h2>Partie terminée !</h2>
+
+				<p id="text-end-game">[Message fin de partie à éditer]</p>
+
+				<a class="btn white" id="btn-restart">
+					<span class="btn-inner">Recommencer une partie</span>
+				</a>
+
+			</div>
+
+			</div>
+		</aside>
+    </div>
+
+    
+	<script type="text/javascript" src="js/vendor/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+  </body>
+</html>
