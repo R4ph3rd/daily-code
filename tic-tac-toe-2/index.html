@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="normalize.css"/>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="icon" type="image/jpg" href="assets/images/favicon.png">
+  </head>
+  <body>
+
+    <div class="app">
+		<div id="app"></div>
+
+		<aside id="end-game" class="hidden">
+
+			<!-- OVERLAY -->
+			<div class="overlay"></div>
+			<!-- / OVERLAY -->
+
+			<div class="inner">
+
+			<div class="modal-wrapper">
+				<h2>Partie terminée !</h2>
+
+				<p id="text-end-game">[Message fin de partie à éditer]</p>
+
+				<a class="btn white" id="btn-restart">
+					<span class="btn-inner">Recommencer une partie</span>
+				</a>
+
+			</div>
+
+			</div>
+		</aside>
+    </div>
+
+    
+	<!-- <script type="text/javascript" src="js/vendor/jquery-3.1.1.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+	<script src="store/index.js"></script>
+	<script src="app.js" type="module"></script>
+	<!-- <script type="text/javascript" src="js/index.js"></script> -->
+
+  </body>
+</html>

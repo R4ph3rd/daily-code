@@ -1,0 +1,325 @@
+/**
+ * Mixins
+ */
+/**
+ * Default colors
+ */
+/**
+* Fonts
+*/
+@font-face {
+  font-family: 'Brandon';
+  src: url("assets/fonts/brandon_light-webfont.woff2") format('woff2'), url("assets/fonts/brandon_light-webfont.woff") format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url("assets/fonts/brandon_reg-webfont.woff2") format('woff2'), url("assets/fonts/brandon_reg-webfont.woff") format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url("assets/fonts/brandon_bld-webfont.woff2") format('woff2'), url("assets/fonts/brandon_bld-webfont.woff2") format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+/**
+ * Default styles
+ */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #312f2e;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-family: 'Brandon', Helvetica, sans-serif;
+}
+.app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+a:focus,
+a:visited {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+a,
+small,
+span {
+  color: #fff;
+  text-transform: uppercase;
+}
+section,
+aside {
+  width: 100%;
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+section .inner,
+aside .inner {
+  margin: auto;
+  text-align: center;
+}
+.hidden {
+  display: none !important;
+}
+.btn {
+  min-width: 140px;
+  padding: 16px 20px;
+  display: inline-block;
+  background: transparent;
+  border-radius: 22px;
+  font-family: 'Brandon', Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(to top, #fbe67e, #28b2cd);
+  transition: font-size 0.1s ease-in;
+}
+.btn.white:before {
+  background: linear-gradient(to top, #fbe67e, #28b2cd);
+}
+.btn:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border-radius: 22px;
+  background: #312f2e;
+  transition: background 0.15s ease-out;
+}
+.btn:hover {
+  font-size: 13px;
+}
+.btn:hover:before {
+  background: transparent;
+}
+.btn span {
+  position: relative;
+}
+/**
+ * STYLES IMPORTS
+ */
+#intro h3 {
+  margin-bottom: 30px;
+}
+#intro input {
+  position: relative;
+  background: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  text-align: center;
+  width: 100%;
+  font: normal 300 14px/14px 'Brandon', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+#intro .input {
+  position: relative;
+  margin-bottom: 30px;
+}
+#intro .input:before {
+  position: absolute;
+  content: '';
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 100%;
+}
+#intro .input-player-1:before {
+  background: #28b2cd;
+}
+#intro .input-player-1 input {
+  color: #28b2cd;
+}
+#intro .input-player-1 input::-webkit-input-placeholder {
+  color: #28b2cd !important;
+}
+#intro .input-player-1 input:-moz-placeholder {
+  color: #28b2cd !important;
+}
+#intro .input-player-1 input::-moz-placeholder {
+  color: #28b2cd !important;
+}
+#intro .input-player-1 input:-ms-input-placeholder {
+  color: #28b2cd !important;
+}
+#intro .input-player-2:before {
+  background: #fbe67e;
+}
+#intro .input-player-2 input {
+  color: #fbe67e;
+}
+#intro .input-player-2 input::-webkit-input-placeholder {
+  color: #fbe67e !important;
+}
+#intro .input-player-2 input:-moz-placeholder {
+  color: #fbe67e !important;
+}
+#intro .input-player-2 input::-moz-placeholder {
+  color: #fbe67e !important;
+}
+#intro .input-player-2 input:-ms-input-placeholder {
+  color: #fbe67e !important;
+}
+#step-choose-game-mode .clear {
+  clear: both;
+}
+#step-choose-game-mode .btn {
+  margin-bottom: 15px;
+}
+#game .btn {
+  margin-top: 30px;
+}
+#title-vs,
+#title-ai {
+  font: normal 300 24px/24px 'Brandon', Helvetica, sans-serif;
+}
+#title-vs b,
+#title-ai b {
+  font-weight: 500;
+}
+#board-game {
+  position: relative;
+  width: 329px;
+  height: 329px;
+  margin: 60px 0;
+}
+#board-game .board {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#board-game .symbols {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#board-game .symbols li {
+  position: absolute;
+  width: 109px;
+  height: 109px;
+}
+#board-game .symbols li[data-id="0"] {
+  top: 0;
+  left: 0;
+}
+#board-game .symbols li[data-id="1"] {
+  top: 0;
+  left: 110px;
+}
+#board-game .symbols li[data-id="2"] {
+  top: 0;
+  left: 220px;
+}
+#board-game .symbols li[data-id="3"] {
+  top: 110px;
+  left: 0;
+}
+#board-game .symbols li[data-id="4"] {
+  top: 110px;
+  left: 110px;
+}
+#board-game .symbols li[data-id="5"] {
+  top: 110px;
+  left: 220px;
+}
+#board-game .symbols li[data-id="6"] {
+  top: 220px;
+  left: 0;
+}
+#board-game .symbols li[data-id="7"] {
+  top: 220px;
+  left: 110px;
+}
+#board-game .symbols li[data-id="8"] {
+  top: 220px;
+  left: 220px;
+}
+#board-game .symbol-cross {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  width: 48px;
+  height: 48px;
+  background: url("assets/images/symbol-cross.svg") no-repeat 0 0;
+}
+#board-game .symbol-circle {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  width: 48px;
+  height: 48px;
+  background: url("assets/images/symbol-circle.svg") no-repeat 0 0;
+}
+#time-elapsed span,
+#time-elapsed small {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+#time-elapsed span {
+  font: normal 200 40px/40px 'Brandon', Helvetica, sans-serif;
+}
+#time-elapsed small {
+  font: normal 300 12px/12px 'Brandon', Helvetica, sans-serif;
+  letter-spacing: 0.06em;
+}
+#end-game {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#end-game .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(49,47,46,0.7);
+}
+#end-game .modal-wrapper {
+  position: relative;
+  background: #fff;
+  padding: 30px 20px;
+  min-width: 300px;
+}
+#end-game h2 {
+  color: #312f2e;
+  font: normal 500 18px/18px 'Brandon', Helvetica, sans-serif;
+}
+#end-game p {
+  margin-top: 10px;
+  font: normal 300 14px/14px 'Brandon', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+#end-game .btn {
+  margin-top: 30px;
+}
